@@ -43,13 +43,13 @@
 
     function transform(text) {
 
-      let regA = new RegExp('[a]', 'gi');
-      let regE = new RegExp('[e]', 'gi');
-      let regO = new RegExp('[o]', 'gi');
-      let regU = new RegExp('[u]', 'gi');
+      let regA = new RegExp('[a,à]', 'gi');
+      let regE = new RegExp('[e,é,è]', 'gi');
+      let regO = new RegExp('[o,ô]', 'gi');
+      let regU = new RegExp('[u,ù]', 'gi');
       let regI = new RegExp('[i]', 'gi');
 
-      // Application de la fonction replace() sur le mot
+      // Application de la fonction replace() sur le texte
 
       text = text.replace(regA, 'apa');
       text = text.replace(regO, 'opo');
@@ -58,6 +58,9 @@
       text = text.replace(regE, 'epe');
 
       resultat.innerHTML = text;
+  
+
+    }
   </script>
 </body>
 
